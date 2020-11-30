@@ -23,15 +23,15 @@
             language:"en",
             contactInfo:true,
             supportedCurrencies:"all",
-            supportedPaymentMethods: "all",
+            supportedPaymentMethods: "APPLE_PAY",
             saveCardOption:false,
             customerCards: true,
             notifications:'standard',
             callback:(response) => {
                 console.log('response', response);
             },
-            onClose: () => {
-                console.log("onClose Event");
+            onClose: (response) => {
+                console.log("onClose Event", response);
             },
             backgroundImg: {
                 url: 'imgURL',
